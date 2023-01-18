@@ -19,7 +19,7 @@ if not os.path.exists('SOLUÇÃO.txt'):
 
 
 # Função 'range' serve para determinar de quando a quando voce quer comecar a contagem : range(inicio, fim)
-for NumPage in range(4365, 10000):
+for NumPage in range(4600, 10000):
 
     #Comando pyautogui.position() serve para descobrir a posição do mouse (x e y)
     '''print(pyautogui.position())
@@ -47,7 +47,7 @@ for NumPage in range(4365, 10000):
     if not '--' in valueProblem:
          with open('PROBLEMAS.txt', 'a', encoding='utf-8') as createProblems:
             valueProblem = valueProblem.strip('\n')
-            createProblems.write(str(valueProblem) + '\n')     
+            createProblems.write(str(valueProblem))     
 
     #Seleciona e copia os valores de soluções
     pyautogui.click(-1007,599)
@@ -60,5 +60,5 @@ for NumPage in range(4365, 10000):
     if not 'Solução' in valueSolution :
         with open('SOLUÇÃO.txt', 'a', encoding='utf-8') as createSolutions:
             valueSolution = valueSolution.strip('\n')
-            createSolutions.write(str(valueSolution) + '\n')
+            createSolutions.write(str(valueSolution))
     
